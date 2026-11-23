@@ -1,0 +1,52 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+    margin-top: auto;
+    min-width: 100%;
+    display: flex; 
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px; 
+    background: $space-2; 
+    border-top: 2px solid $portal;
+    font-size: 14px; 
+    color: $muted;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: -16px;
+    @include breakpoint(desktop){
+        flex-direction: row;
+        justify-content:space-between;
+    } 
+    .disclaimer{ 
+        font-size: 14px; 
+        opacity: .7;
+        @include breakpoint(tablet){
+            font-size: 16px;
+        }  
+    }
+    p{
+        margin-bottom: 8px;
+        @include breakpoint(tablet){
+            font-size: 20px;
+        }
+        @include breakpoint(desktop){
+            padding-left: 16px; 
+        }     
+    }
+    a{
+        align-self: center;
+        font-size: 18px;
+        font-weight: 700;
+        &:hover{
+            cursor: url(../../img/comun/Pointer.png), pointer;
+        }
+        @include breakpoint(tablet){
+            font-size: 22px;
+        }
+        @include breakpoint(desktop){
+            padding-right: 16px; 
+        } 
+    }
+}

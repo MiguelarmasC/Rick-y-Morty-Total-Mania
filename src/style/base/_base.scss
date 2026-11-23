@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+/* Base styles */
+* {
+    font-size: 17px;
+    font-family: $general-font;
+    color: $white;
+}
+
+html{
+    background-color: $black;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    background-color: $black;
+    color: $white;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    a {
+         color: $portal; 
+         text-decoration: none; 
+         transition: color .2s; 
+         &:hover { 
+            color: $portal-glow; 
+        } 
+    }
+    img { 
+        max-width: 100%; 
+        display: block; 
+    }
+    h1, h2 { 
+        font-family: $font-title; 
+        letter-spacing: 2px; 
+        color: $portal; 
+    }
+}
+

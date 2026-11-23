@@ -1,0 +1,97 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+#aviso-legal-main{
+    @include breakpoint(desktop){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #aviso-legal{
+        background: $card;
+        border-radius: $radius;
+        overflow: hidden;
+        border: 1px solid rgba($rick, .25);
+        transition: transform .25s, box-shadow .25s, border-color .25s;
+        margin-bottom: 50px;
+        @include breakpoint(tablet){
+            margin-top: 8%;
+        }
+        @include breakpoint(tablethorizontal){
+            margin-top: 12%;
+        }
+        @include breakpoint(desktop){
+            margin-top: 8%;
+            max-width: 75%;
+        }
+        @include breakpoint(desktopxl){
+            margin-top: 6%;
+            max-width: 55%;
+        }
+        h1{
+            color: $yellow-2;
+            font-size: 45px;
+            width: 75%;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 35px;
+            text-shadow: 0 0 12px rgba($portal, .7), 4px 4px 0 darken($portal, 35%);
+            @include breakpoint(tablet){
+                font-size: 55px;
+            }
+            @include breakpoint(desktop){
+                font-size: 65px;
+            }
+        }
+        h2{
+            font-size: 20px;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 5px;
+            color: $yellow-2;
+            @include breakpoint(tablet){
+                font-size: 26px;
+            }
+            @include breakpoint(desktop){
+                font-size: 32px;
+            }
+            @include breakpoint(desktopxl){
+                margin-bottom: 25px;
+                margin-top: 50px;
+            } 
+        }
+        p{
+            font-size: 14px; 
+            padding: 15px;
+            @include breakpoint(tablet){
+                font-size: 18px;
+            }
+            @include breakpoint(desktop){
+                font-size: 22px;
+            }
+            @include breakpoint(desktopxl){
+                padding: 0px;
+                padding-left: 15px;
+            } 
+        }
+        a{
+            font-size: 16px;
+            font-weight: 700;
+            &:hover{
+                cursor: url(../../img/comun/Pointer.png), pointer;
+            }
+            @include breakpoint(tablet){
+                font-size: 20px;
+            }
+            @include breakpoint(desktop){
+                font-size: 24px;
+            }
+        }
+        #sources{
+            margin-bottom: 20px;
+        }        
+    }
+}
+

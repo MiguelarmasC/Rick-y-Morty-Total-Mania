@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+<meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../src/img/comun/favicon-V4.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto Final del modulo de JavaScript-Rick y Morty Wiki.">
+    <meta name="author" content="MiguelE. Armnas R.C.">
+    <title>Rick & Morty Total Manía-Personajes</title>
+  </head>
+  <body>
+    <script type="module" src="../src/ts/personajes.ts"></script>
+    <header>
+      <a href="../index.html"><img src="../src/img/comun/logo.png" alt="Logo" class="logo"></a>
+      <div class="menu">
+        <input type="checkbox" name="burger" class="menu-check" id="menu-check">
+        <label for="menu-check"><img src="../src/img/comun/menu_burger.png" alt="menu hamburguesa" class="menu-burger"></label>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a class="active">Personajes</a></li>
+            <li><a href="./episodios.html">Episodios</a></li>
+            <li><a href="./localizaciones.html">Localizaciones</a></li>
+            <li><a href="./favoritos.html">Favoritos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="personajes-main">
+      <div id="container-personajes">
+        <form action="" id="form">
+          <input type="text" id="buscar" placeholder="Buscar Personaje" autocomplete="off">
+          <div class="select">
+            <label for="filtroEstado">Estado</label>
+            <select name="estado" id="filtroEstado">
+              <option value="" selected>Todos</option>
+              <option value="Alive">Vivo</option>
+              <option value="Dead">Muerto</option>
+              <option value="Unknown">Desconocido</option>
+            </select>
+          </div>
+          <div class="select" >
+            <label for="filtroGenero">Genero</label>
+            <select name="genero" id="filtroGenero">
+              <option value="" selected>Todos</option>
+              <option value="female">Femenino</option>
+              <option value="male">Masculino</option>
+              <option value="genderless">Sin genero</option>
+              <option value="unknown">Desconocido</option>
+            </select>
+          </div>
+          <button id="buscar">Buscar</button>
+        </form>
+        <section id="personajes"></section>
+        <button id="btn-personajes">Más personajes</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Proyecto Web by Miguel Armas.</p>
+        <p class="disclaimer">Este sitio web es un proyecto educativo sin ánimo de lucro.</p>
+      </div>
+      <a href="./aviso-legal.html">Aviso legal</a>
+    </footer>
+    <script type="module" src="../src/main.ts"></script>
+  </body>
+</html>

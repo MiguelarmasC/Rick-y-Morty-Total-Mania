@@ -1,0 +1,33 @@
+@use '../vendors/vendors' as *;
+/* Variables */
+
+/*FONTS*/
+$general-font: "Space Grotesk", system-ui, sans-serif;
+$font-title: "Creepster", sans-serif;
+
+/*COLORS*/
+$white: #ffffff;
+$gray: #ababab;
+$black: #000000;
+$green-skipe: #4ee1a0;
+$green-mok: #afdf4b;
+$green-brillante: #aaff00;
+$green-vibrante: #55aa00;
+$green-oscuro: rgb(0,85,0);
+$yellow-2: yellow;
+$portal: #97ce4c;        
+$portal-glow: #c6f36b;
+$morty: #f0e14a;         
+$rick: #44b3d6;          
+$space: #0b0f1a;        
+$space-2: #141b2d;
+$card: #1a2236;
+$text: #e8f0e0;
+$muted: #8a97ad;
+$radius: 14px;
+
+// VIEWPORT SIZE
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;

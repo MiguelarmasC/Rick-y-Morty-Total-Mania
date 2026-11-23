@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+
+/* Mixins */
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+@mixin button{
+  display: block;
+  border-radius: 50px;
+  background-color: $portal; 
+  color: $black;
+  font-weight: 600;
+  border-color: $green-mok;
+	padding: 10px;
+  &:hover{
+    transform: translateY(-2px);
+	  cursor: url(../../img/comun/Pointer.png), pointer;
+  }
+  &.disabled{
+    background-color: $gray;
+    color: $white;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-fav{
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  &:hover{
+    background-color: $yellow-2;
+  }
+}
+
+@mixin formato-input-select{
+  border-color: $green-mok;
+  background: linear-gradient(160deg, rgba($rick, .9), rgba($green-skipe, .9));
+  border-radius: 10px;
+  color: $black;
+}
+
+@mixin formato-ficha{
+  position: relative;
+  background: $card;
+  border-radius: $radius;
+  overflow: hidden;
+  border: 1px solid rgba($rick, .25);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+  &:hover{ 
+    transform: translateY(-6px) rotate(-.5deg); 
+    border-color: $portal;
+  }
+  &.is-expanded {
+    z-index: 10;
+    &:hover{ 
+      transform: translateY(-6px) rotate(-.5deg); 
+      border-color: $portal;
+    }
+  }
+}
+
+@mixin spinner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 1 / -1;
+}
+
+@mixin fav{
+  background-color: $white;
+  border-radius: 50px;
+  &:hover{
+    background-color: $yellow-2;
+  }
+}
+
+@mixin estilos-option{
+  text-align: center;
+  background-color: $green-skipe;
+  color: $black;
+  font-weight: 600;
+}
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
