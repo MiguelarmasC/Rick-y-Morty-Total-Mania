@@ -15,7 +15,7 @@ spinner.src = gif;
 spinner.classList.add('spinner');
 
 // Variables
-let favoritosObj = getFavoritos() as Array<Objeto>;
+let favoritosObj: Array<Objeto> = getFavoritos() ?? [];
 
 // Función de filtro por tipo de favoritos.
 function analizarLista(favoritos : Array<Objeto>) {
