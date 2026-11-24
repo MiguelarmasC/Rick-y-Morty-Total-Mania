@@ -7,10 +7,11 @@ import {
     getLocalizaciones, getPersonajes, getEpisodio, getFavoritos, guardarFavoritos, quitarFavoritos, Info,
     expandirInformacion, Objeto, svgImg, lugaresImg, episodiosImg
 } from './utilidades';
+import gif from '../img/comun/Spinnergreen.gif';
 
 // Gif de carga de datos.
 let spinner = document.createElement('img');
-spinner.src = '../src/img/comun/Spinnergreen.gif';
+spinner.src = gif;
 spinner.classList.add('spinner');
 
 // Variables

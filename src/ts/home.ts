@@ -9,10 +9,11 @@ import {
     visualizarPersonajeRandom, generarLugarRandom, mostrarEpisodioRandom, getFavoritos, 
     guardarFavoritos, quitarFavoritos, expandirInformacion, Objeto
 } from './utilidades';
+import gif from '../img/comun/Spinnergreen.gif'; 
 
 // Gif de carga de datos.
 let spinner = document.createElement('img');
-spinner.src = './src/img/comun/Spinnergreen.gif';
+spinner.src = gif;
 spinner.classList.add('spinner');
 
 // Eventos.

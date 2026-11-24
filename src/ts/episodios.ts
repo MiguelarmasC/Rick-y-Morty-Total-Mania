@@ -10,10 +10,11 @@ import {
     mostrarEpisodioRandom, getFavoritos, guardarFavoritos, quitarFavoritos, 
     expandirInformacion, comprobarFavoritos, Objeto, UrlEpisodios, svgImg, episodiosImg
 } from './utilidades';
+import gif from '../img/comun/Spinnergreen.gif';
 
 // Gif de carga de datos.
 let spinner = document.createElement('img');
-spinner.src = '../src/img/comun/Spinnergreen.gif';
+spinner.src = gif;
 spinner.classList.add('spinner');
 
 // Variables.
@@ -75,7 +76,8 @@ async function episodiosFiltrados(filtro : string){
         return episodiosObjet;
     }else{
         let newP = document.createElement('p') as HTMLParagraphElement;
-        newP.innerHTML = 'Error, fallo de conexion con la base de datos.';
+        newP.classList.add('error');
+        newP.innerHTML = 'Error, fallo de conexion con la base de datos, intente mas tarde.';
         return newP;
     };
 };
@@ -84,6 +86,8 @@ async function visualizarFiltros(filtro : string) {
     let respuesta = await episodiosFiltrados(filtro);
     if (respuesta.tagName === 'P'){
         episodios.appendChild(respuesta);
+        btnEpisodios.disabled = true;
+        btnEpisodios.classList.add('disabled');
     }else{
         if(contador < respuesta.length){
             for (let i = contador; i <  Math.min(contador + 4, respuesta.length); i++){

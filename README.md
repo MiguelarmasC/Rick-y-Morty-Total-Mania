@@ -15,12 +15,12 @@ Para la entrega del proyecto, sigue los siguientes pasos:
 
 ### 📌 Enlace público:
 
-* Subid el proyecto a **GitHub Pages** o una plataforma similar. *(https://miguelarmasc.github.io/Entregable-5-CSS/).*
+* Subid el proyecto a **GitHub Pages** o una plataforma similar. *(https://miguelarmasc.github.io/Rick-y-Morty-Total-Mania/).*
 * Se requerirá un **enlace público** para la corrección.
 
 # Rick & Morty Total Manía
 
-Aplicación web interactiva construida con **TypeScript**, **SCSS** y **Vite** que consume la [Rick and Morty API](https://rickandmortyapi.com/) para explorar personajes, episodios y localizaciones del universo de la serie.
+Web interactiva construida con **TypeScript**, **SCSS** y **Vite** que consume la [Rick and Morty API](https://rickandmortyapi.com/) para explorar personajes, episodios y localizaciones del universo de la serie.
 
 ## Características principales
 
@@ -38,6 +38,12 @@ Aplicación web interactiva construida con **TypeScript**, **SCSS** y **Vite** q
 - **Estilos**: SCSS (`@use`, variables y mixins)
 - **Bundler / Entorno de desarrollo**: Vite
 - **API externa**: [Rick and Morty API](https://rickandmortyapi.com/api)
+
+## Notas de diseño
+
+- Para mantener la coherencia visual y el aspecto general de las tarjetas, se limitó a la primera página la carga de localizaciones desde la API, asegurando así una imagen representativa para cada una.
+
+- En el caso de los episodios, se asignaron imágenes aleatorias alusivas a la serie como acompañamiento de los datos de la API, con el mismo objetivo de preservar la uniformidad visual de las fichas.
 
 ## Estructura del proyecto
 
@@ -58,3 +64,6 @@ rick-y-morty-total-mania/
 ├── package.json
 ├── tsconfig.json
 └── vite.config.js
+
+
+

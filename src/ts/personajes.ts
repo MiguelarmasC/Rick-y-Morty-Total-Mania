@@ -12,10 +12,11 @@ import {
     visualizarPersonajeRandom, getFavoritos, guardarFavoritos, quitarFavoritos, 
     expandirInformacion, comprobarFavoritos, Objeto, UrlPersonajes, svgImg
 } from './utilidades';
+import gif from '../img/comun/Spinnergreen.gif';
 
 // Gif de carga de datos.
 let spinner = document.createElement('img');
-spinner.src = '../src/img/comun/Spinnergreen.gif';
+spinner.src = gif;
 spinner.classList.add('spinner');
 
 // Interface de filtrado.
@@ -88,6 +89,7 @@ async function personajesFiltrados(filtro : string){
         return personajesObjet.results;
     }else{
         let newP = document.createElement('p') as HTMLParagraphElement;
+        newP.classList.add('error');
         newP.innerHTML = 'Error en la busqueda, el personaje no existe en la base de datos.';
         return newP;
     };
@@ -97,6 +99,8 @@ async function visualizarFiltros(filtro : string) {
     let respuesta = await personajesFiltrados(filtro);
     if (respuesta.tagName === 'P'){
         personajes.appendChild(respuesta);
+        btnPersonajes.disabled = true;
+        btnPersonajes.classList.add('disabled');
     }else{
         if(contador < respuesta.length){
             for (let i = contador; i <  Math.min(contador + 4, respuesta.length); i++){
@@ -119,7 +123,6 @@ async function visualizarFiltros(filtro : string) {
         }else if(contador >= 4){
             contador +=4;
         };
-        console.log(contador)
         if((contador >= respuesta.length)){
             btnPersonajes.disabled = true;
             btnPersonajes.classList.add('disabled');

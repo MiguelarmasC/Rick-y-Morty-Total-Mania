@@ -150,6 +150,31 @@
                     background-color: $yellow-2;
                 }
             }
+            .error{
+                font-size: 20px;
+                color: $yellow-2;
+                font-weight: 600;
+                @include breakpoint(tablet){
+                    font-size: 24px;
+                    margin-top: 30%;
+                    margin-left: 4%;
+                    grid-column: span 2;
+                }
+                @include breakpoint(tablethorizontal){
+                    margin-top: 20%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    grid-column: span 4;
+                }
+                @include breakpoint(desktop){
+                    font-size: 28px;
+                    margin-top: 25%;
+                }
+                
+                @include breakpoint(desktopxl){
+                    margin-top: 15%;
+                }
+            }
         }
         #btn-personajes{
             margin-bottom: 20px;
